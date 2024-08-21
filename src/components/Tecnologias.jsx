@@ -15,7 +15,7 @@ function Tecnologias() {
   return (
     <div className="min-h-screen bg-gray-900 text-white flex flex-col items-center justify-center relative">
       <h2 id='Tecnologias' className="text-4xl font-bold mb-[60px] underline">Tecnologias</h2>
-      <div className="flex justify-around w-full max-w-5xl mb-[150px]">
+      <div className="flex justify-around w-full max-w-5xl mb-[200px]">
         <div className="flex flex-col items-center">
           <h3 className="text-2xl font-bold mb-6">Front-end</h3>
           <div className="flex flex-col items-center space-y-4">
