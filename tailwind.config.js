@@ -5,7 +5,7 @@ module.exports = {
     extend: {
       colors: {
         homeBackground: '#2c2c2c',
-        orangeContrast: '#2c8800',
+        orangeContrast: '#ec8800',
         littleGray: '#474747',
         midNightBlue: '#14213d',
       },

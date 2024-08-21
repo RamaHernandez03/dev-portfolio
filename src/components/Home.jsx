@@ -39,7 +39,7 @@ function Home() {
   useEffect(() => {
     const cursorInterval = setInterval(() => {
       setShowCursor((prev) => !prev);
-    }, 500); // Cambia la visibilidad del cursor cada 500 ms
+    }, 500); 
 
     return () => clearInterval(cursorInterval);
   }, []);
@@ -48,7 +48,7 @@ function Home() {
     <div className="min-h-screen bg-gray-900 text-white relative">
       <NavBar/>
       <header className="flex z-10 flex-col justify-center h-screen text-left ml-[125px] mt-[-45px] relative"> {/* Ajuste del margen superior */}
-        <h1 className="text-[54px] mb-4">Hola, Soy Ramiro Hernández.</h1>
+        <h1 id='Home' className="text-[54px] mb-4">Hola, Soy Ramiro Hernández.</h1>
         <h2 className="text-[59px] font-bold relative flex items-center">
           <span className="text-white mr-[20px]">Software</span>
           <div className="relative flex items-center">

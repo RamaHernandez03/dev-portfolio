@@ -5,22 +5,34 @@ import NavBar from './NavBar';
 const SobreMi = () => {
   return (
     <div className="h-screen w-screen flex flex-col items-center justify-center bg-gray-800">
-      <h2 className="font-semibold text-[40px] text-white mb-[150px] underline">Sobre Mi</h2>
-      <div className="bg-gray-700 p-10 rounded-lg flex items-center space-x-10">
+      <h2 id='SobreMi' className="font-semibold text-[40px] text-white mb-[80px] underline">Sobre Mi</h2>
+      <div className="bg-gray-700 p-10 rounded-lg flex items-start space-x-10">
         <div className="flex flex-col items-center">
           <img
             src={SobreMiImage}
             alt="Rama"
-            className="w-48 h-48 object-cover rounded-lg"
+            className="w-[300px] h-[300px] object-cover rounded-lg"
           />
-          <p className="text-white mt-4 text-xl font-bold">{'<Rama/>'}</p> {/* Agrega <Rama/> debajo de la imagen */}
+          <p className="text-white mt-8 text-2xl font-bold">{'<Rama/>'}</p>
         </div>
         <div className="text-white">
-          <p className="text-2xl mb-4">
-            Soy un entusiasta <span className="text-orange-500">Desarrollador de Software</span> que vive en la Ciudad de Buenos Aires, Argentina.
+          <p className="text-[24px] mb-4">
+            Soy un entusiasta de la <span className="text-orange-500">Programacion</span> y de las <span className="text-orange-500">Nuevas Tecnologias</span>
           </p>
-          <p className="text-2xl mb-4">
-            Actualmente estoy en la carrera de <span className="text-orange-500">Ingeniería Informática</span>, En la UBA.
+          <p className="text-[24px] mb-4">
+            que reside en la Ciudad de Buenos Aires. Mientras avanzo en
+          </p>
+          <p className="text-[24px] mb-4">
+            la carrera de <span className='text-orange-500'>Ingenieria Informatica</span> en la UBA, Me impulsa 
+          </p>
+          <p className="text-[24px] mb-4">
+            una pasion por el aprendizaje de nuevas herramientas 
+          </p>
+          <p className="text-[24px] mb-4">
+            que me potencien a la hora de <span className="text-orange-500">Solucionar Problemas.</span>
+          </p>
+          <p className="text-[24px] mb-4">
+            ¿Queres que hagamos algo increible juntos? Hace  <span className="text-orange-500 underline">¡Click Aqui!</span>
           </p>
         </div>
       </div>
@@ -29,3 +41,4 @@ const SobreMi = () => {
 }
 
 export default SobreMi;
+
