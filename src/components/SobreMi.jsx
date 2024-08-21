@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-scroll';
 import SobreMiImage from '../assets/SobreMi.jpeg';
 
 const SobreMi = () => {
@@ -31,7 +32,9 @@ const SobreMi = () => {
             que me potencien a la hora de <span className="text-orange-500">Solucionar Problemas.</span>
           </p>
           <p className="text-[24px] mb-4">
-            ¿Queres que hagamos algo increible juntos? Hace  <span className="text-orange-500 font-bold underline inline-block hover:translate-y-[-7px] transition-transform duration-500">¡Click Aqui!</span>
+            ¿Queres que hagamos algo increible juntos? Hace  <span className="text-orange-500 font-bold underline inline-block hover:translate-y-[-7px] transition-transform duration-500">
+              <Link to="Contactame" smooth={true} duration={500}>¡Click Aqui!</Link>
+            </span>
           </p>
         </div>
       </div>

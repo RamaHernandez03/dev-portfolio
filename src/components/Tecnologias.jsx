@@ -47,8 +47,7 @@ function Tecnologias() {
           </div>
         </div>
       </div>
-
-      <div className="absolute bottom-0 left-0 right-0 h-40 w-[100%] bg-gray-800 rounded-t-[100%] "></div>
+      <div className="absolute bottom-0 left-0 right-0 h-40 w-[100%] shadow-[0px_-16px_20px_rgba(0,0,0,0.2)] bg-gray-800 rounded-t-[100%] "></div>
     </div>
   );
 }

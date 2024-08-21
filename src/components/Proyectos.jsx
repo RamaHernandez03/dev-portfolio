@@ -1,7 +1,7 @@
 import React from 'react';
 import matesMood from '../assets/matesmood.png';
-import python from '../assets/python.png';
-import js from '../assets/js.png';
+import github from '../assets/github.webp';
+
 
 const ProjectCard = ({ image, title, description, link }) => {
     return (
@@ -34,13 +34,13 @@ const Projects = () => {
         link: 'https://matesmood.netlify.app/',
       },
       {
-        image: python,
+        image: github,
         title: 'Proyecto 1',
         description: 'Descripción del proyecto 1.',
         link: '#',
       },
       {
-        image: js,
+        image: github,
         title: 'Proyecto 1',
         description: 'Descripción del proyecto 1.',
         link: '#',
