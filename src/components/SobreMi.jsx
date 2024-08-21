@@ -1,6 +1,5 @@
 import React from 'react';
 import SobreMiImage from '../assets/SobreMi.jpeg';
-import NavBar from './NavBar';
 
 const SobreMi = () => {
   return (

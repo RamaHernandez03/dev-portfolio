@@ -47,7 +47,7 @@ function Home() {
   return (
     <div className="min-h-screen bg-gray-900 text-white relative">
       <NavBar/>
-      <header className="flex z-10 flex-col justify-center h-screen text-left ml-[125px] mt-[-45px] relative"> {/* Ajuste del margen superior */}
+      <header className="flex z-10 flex-col justify-center h-screen text-left ml-[125px] mt-[-45px] relative">
         <h1 id='Home' className="text-[54px] mb-4">Hola, Soy Ramiro Hernández.</h1>
         <h2 className="text-[59px] font-bold relative flex items-center">
           <span className="text-white mr-[20px]">Software</span>
