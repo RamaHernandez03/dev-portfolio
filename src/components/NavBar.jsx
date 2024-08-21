@@ -18,7 +18,9 @@ const NavBar = () => {
           <li className="text-2xl text-white font-bold hover:text-orange-500 transition ease-in duration-200 cursor-pointer">
            <Link to="Tecnologias" smooth={true} duration={500}>Tecnologias</Link>
           </li>
-          <li className="text-2xl text-white font-bold hover:text-orange-500 transition ease-in duration-200 cursor-pointer">Contacto</li>
+          <li className="text-2xl text-white font-bold hover:text-orange-500 transition ease-in duration-200 cursor-pointer">
+           <Link to="Contactame" smooth={true} duration={500}>Contactame</Link>
+          </li>
         </ul>
       </nav>
     </div>

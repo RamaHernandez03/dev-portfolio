@@ -3,6 +3,7 @@ import Home from './components/Home.jsx';
 import SobreMi from './components/SobreMi.jsx';
 import Proyectos from './components/Proyectos.jsx';
 import Tecnologias from './components/Tecnologias.jsx';
+import Form from './components/Form.jsx';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <SobreMi/>
       <Proyectos/>
       <Tecnologias/>
+      <Form/>
     </div>
   );
 }
