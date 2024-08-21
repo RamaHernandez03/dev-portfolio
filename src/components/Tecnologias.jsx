@@ -24,9 +24,7 @@ function Tecnologias() {
             <FontAwesomeIcon icon={faReact} className='w-16 h-16 p-5' style={{color: "#008efa",}}/>
           </div>
         </div>
-
         <div className="border-l-2 border-orange-500"></div>
-
         <div className="flex flex-col items-center">
           <h3 className="text-2xl font-bold mb-6">Extras</h3>
           <div className="flex flex-col items-center space-y-4">
@@ -35,9 +33,7 @@ function Tecnologias() {
             <FontAwesomeIcon icon={faDatabase} className='w-16 h-16 p-5' style={{color: "#B197FC",}} />
           </div>
         </div>
-
         <div className="border-l-2 border-orange-500"></div>
-
         <div className="flex flex-col items-center">
           <h3 className="text-2xl font-bold mb-6">Back-end</h3>
           <div className="flex flex-col items-center space-y-4">

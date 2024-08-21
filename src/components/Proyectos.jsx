@@ -23,8 +23,6 @@ const ProjectCard = ({ image, title, description, link }) => {
       </a>
     );
 };
-  
-
 const Projects = () => {
     const projectData = [
       {
@@ -46,7 +44,6 @@ const Projects = () => {
         link: '#',
       },
     ];
-
   return (
     <div className="bg-gray-900 p-10 min-h-screen flex flex-col items-center justify-center">
       <div className="text-center mb-20 w-full">
