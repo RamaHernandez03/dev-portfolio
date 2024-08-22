@@ -47,10 +47,10 @@ function Home() {
   return (
     <div className="min-h-screen bg-gray-900 text-white relative">
       <NavBar/>
-      <header className="flex z-10 flex-col justify-center h-screen text-left ml-[125px] mt-[-45px] relative">
-        <h1 id='Home' className="text-[54px] mb-4">Hola, Soy Ramiro Hernández.</h1>
-        <h2 className="text-[59px] font-bold relative flex items-center">
-          <span className="text-white mr-[20px]">Software</span>
+      <header className="flex z-10 flex-col justify-center items-start h-screen px-10">
+        <h1 id='Home' className="text-[54px] mb-4 ml-[130px]">Hola, Soy Ramiro Hernández.</h1>
+        <h2 className="text-[59px] font-bold flex items-center ml-[130px]">
+          <span className="text-white mr-5">Software</span>
           <div className="relative flex items-center">
             <span className="text-orange-500">
               {displayedText}
@@ -58,8 +58,8 @@ function Home() {
             <span className={`text-orange-500 ${showCursor ? 'visible' : 'invisible'}`}>|</span>
           </div>
         </h2>
-        <div className='text-[59px] font-bold relative flex items-center'>
-          <span className="text-white absolute ml-[560px] mt-[-90px]">
+        <div className='text-[59px] font-bold flex items-center'>
+          <span className="text-white ml-[690px] mt-[-90px] absolute">
             &lt;/&gt;
           </span>
         </div>
