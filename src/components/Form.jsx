@@ -5,7 +5,7 @@ const Form = () => {
   return (
     <div className='h-screen w-screen flex flex-col items-center justify-center bg-gray-800'>
       <h2 id='Contactame' className='font-semibold text-[40px] text-white mb-[40px] underline'>Contactame</h2>
-      <div className="bg-gray-700 p-10 shadow-[0px_12px_16px_rgba(0,0,0,0.2)] rounded-lg flex flex-col items-center w-2/3 max-w-3xl">
+      <div className="bg-gray-700 p-10 mb-[60px] shadow-[0px_12px_16px_rgba(0,0,0,0.2)] rounded-lg flex flex-col items-center w-2/3 max-w-3xl">
         <div className="text-white text-center mb-6">
           <h3 className="text-lg font-semibold mb-4">Hablemos por:</h3>
           <div className="flex justify-center space-x-8 mb-4">
@@ -42,7 +42,7 @@ const Form = () => {
           ></textarea>
           <button
             type="submit"
-            className='bg-orange-500 text-white p-3 rounded-md hover:bg-orange-600 transition duration-300 ease-in-out w-full'
+            className='bg-orange-500 text-white p-3 rounded-md font-bold hover:bg-orange-600 transition duration-300 ease-in-out w-full'
           >
             Enviar
           </button>

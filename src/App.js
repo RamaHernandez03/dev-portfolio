@@ -4,6 +4,7 @@ import SobreMi from './components/SobreMi.jsx';
 import Proyectos from './components/Proyectos.jsx';
 import Tecnologias from './components/Tecnologias.jsx';
 import Form from './components/Form.jsx';
+import Footer from './components/Footer.jsx'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Proyectos/>
       <Tecnologias/>
       <Form/>
+      <Footer/>
     </div>
   );
 }
