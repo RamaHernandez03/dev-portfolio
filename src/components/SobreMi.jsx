@@ -20,22 +20,22 @@ const SobreMi = () => {
           </p>
         </div>
         <div className="text-white text-left md:text-center px-2 sm:px-4 md:px-0">
-          <p className="text-[24px] sm:text-[18px] md:text-[18px] mb-2 sm:mb-3 md:mb-4">
+          <p className="text-[24px] sm:text-[18px] md:text-[16px] mb-2 sm:mb-3 md:mb-4">
             Soy un entusiasta de la <span className="text-orange-500">Programacion</span> y de las <span className="text-orange-500">Nuevas Tecnologias</span>
           </p>
-          <p className="text-[24px] sm:text-[18px] md:text-[18px] mb-2 sm:mb-3 md:mb-4">
+          <p className="text-[24px] sm:text-[18px] md:text-[16px] mb-2 sm:mb-3 md:mb-4">
             que reside en la Ciudad de Buenos Aires. Mientras avanzo en
           </p>
-          <p className="text-[24px] sm:text-[18px] md:text-[18px] mb-2 sm:mb-3 md:mb-4">
+          <p className="text-[24px] sm:text-[18px] md:text-[16px] mb-2 sm:mb-3 md:mb-4">
             la carrera de <span className='text-orange-500'>Ingenieria Informatica</span> en la UBA, Me impulsa 
           </p>
-          <p className="text-[24px] sm:text-[18px] md:text-[18px] mb-2 sm:mb-3 md:mb-4">
+          <p className="text-[24px] sm:text-[18px] md:text-[16px] mb-2 sm:mb-3 md:mb-4">
             una pasion por el aprendizaje de nuevas herramientas 
           </p>
-          <p className="text-[24px] sm:text-[18px] md:text-[18px] mb-2 sm:mb-3 md:mb-4">
+          <p className="text-[24px] sm:text-[18px] md:text-[16px] mb-2 sm:mb-3 md:mb-4">
             que me potencien a la hora de <span className="text-orange-500">Solucionar Problemas.</span>
           </p>
-          <p className="text-[24px] sm:text-[18px] md:text-[18px] mb-2 sm:mb-3 md:mb-4">
+          <p className="text-[24px] sm:text-[18px] md:text-[16px] mb-2 sm:mb-3 md:mb-4">
             ¿Queres que hagamos algo increible juntos? Hace  <span className="text-orange-500 font-bold underline inline-block hover:translate-y-[-7px] transition-transform duration-500">
               <Link to="Contactame" smooth={true} duration={500}>¡Click Aqui!</Link>
             </span>
