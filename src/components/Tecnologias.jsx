@@ -14,7 +14,7 @@ import {faServer} from '@fortawesome/free-solid-svg-icons';
 function Tecnologias() {
   return (
     <div className="min-h-screen bg-gray-900 text-white flex flex-col items-center justify-center relative">
-      <h2 id='Tecnologias' className="text-4xl font-bold mb-[60px] underline">Tecnologias</h2>
+      <h2 id='Tecnologias' className="text-4xl font-bold mb-[60px] pb-[10px] border-b-4 border-orange-500">Tecnologias</h2>
       <div className="flex justify-around w-full max-w-5xl mb-[200px]">
         <div className="flex flex-col items-center">
           <h3 className="text-2xl font-bold mb-6">Front-end</h3>

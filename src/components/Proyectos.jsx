@@ -46,8 +46,8 @@ const Projects = () => {
     ];
   return (
     <div className="bg-gray-900 p-10 min-h-screen flex flex-col items-center justify-center">
-      <div className="text-center mb-20 w-full">
-        <h2 id='Proyectos' className="text-white text-[40px] font-bold underline">Proyectos</h2>
+      <div className="text-center mb-20">
+        <h2 id='Proyectos' className="text-white text-[40px] font-bold pb-[10px] border-b-4 border-orange-500">Proyectos</h2>
       </div>
       <div className="grid grid-cols-3 md:grid-cols-2 lg:grid-cols-1 gap-6 w-full max-w-6xl">
         {projectData.map((project, index) => (

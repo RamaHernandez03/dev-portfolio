@@ -4,7 +4,7 @@ import { FaInstagram, FaWhatsapp, FaLinkedin } from 'react-icons/fa';
 const Form = () => {
   return (
     <div className='h-screen w-screen flex flex-col items-center justify-center bg-gray-800'>
-      <h2 id='Contactame' className='font-semibold z-30 text-[40px] text-white mb-[40px] underline'>Contactame</h2>
+      <h2 id='Contactame' className='font-semibold z-30 text-[40px] text-white mb-[60px] pb-[10px] border-b-4 border-orange-500'>Contactame</h2>
       <div className="bg-gray-700 p-10 mb-[60px] shadow-[0px_12px_16px_rgba(0,0,0,0.2)] rounded-lg flex flex-col items-center w-2/3 max-w-3xl">
         <div className="text-white text-center mb-6">
           <h3 className="text-lg font-semibold mb-4">Hablemos por:</h3>
