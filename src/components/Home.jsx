@@ -7,7 +7,7 @@ function Home() {
   const [loopNum, setLoopNum] = useState(0);
   const [typingSpeed, setTypingSpeed] = useState(150);
   const [showCursor, setShowCursor] = useState(true);
-  const words = ['Developer.', 'Wizard...'];
+  const words = ['Developer', 'Wizard...'];
 
   useEffect(() => {
     let typingTimeout;
