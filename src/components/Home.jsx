@@ -59,7 +59,7 @@ function Home() {
           </div>
         </h2>
         <div className='text-[59px] sm:text-center font-bold flex items-center'>
-          <span className="text-white ml-[690px] mt-[-130px] absolute sm:text-center sm:ml-[125px] sm:text-[35px] sm:mb-[-150px]">
+          <span className="text-white ml-[690px] mt-[-120px] absolute sm:text-center sm:ml-[125px] sm:text-[30px] sm:mb-[-170px]">
             &lt;/&gt;
           </span>
         </div>
