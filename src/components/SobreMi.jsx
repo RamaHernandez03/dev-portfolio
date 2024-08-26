@@ -5,7 +5,7 @@ import SobreMiImage from '../assets/SobreMi.jpeg';
 const SobreMi = () => {
   return (
     <div className="min-h-screen w-full flex flex-col items-center justify-center bg-gray-800 p-4 md:p-8">
-      <h2 id='SobreMi' className="font-semibold pb-[5px] border-b-4 border-orange-500 text-[40px] sm:text-[30px] md:pb-5 md:text-[40px] text-white mb-[40px] sm:mb-[40px] md:mb-[80px]">
+      <h2 id='SobreMi' className="font-semibold pb-[0px] border-b-4 border-orange-500 text-[40px] sm:text-[30px] md:pb-5 md:text-[40px] text-white mb-[40px] sm:mb-[40px] md:mb-[80px]">
         Sobre Mi
       </h2>
       <div className="bg-gray-700 p-10 sm:p-6 md:p-10 md:mb-10 shadow-[0px_12px_16px_rgba(0,0,0,0.2)] rounded-lg flex flex-row md:flex-col items-center md:items-center space-x-4 sm:space-x-6 md:space-x-0 md:space-y-6">
