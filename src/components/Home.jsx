@@ -47,9 +47,9 @@ function Home() {
   return (
     <div className="min-h-screen bg-gray-900 text-white relative">
       <NavBar/>
-      <header className="flex z-10 flex-col justify-center items-start h-screen px-10">
-        <h1 id='Home' className="text-[54px] sm:text-[24px] sm:ml-[20px] sm:text-center sm:whitespace-nowrap mb-4 ml-[130px] overflow-hidden">Hola, Soy Ramiro Hernández.</h1>
-        <h2 className="text-[59px] font-bold flex items-center ml-[130px] sm:text-[30px] sm:ml-[20px] sm:text-center sm:whitespace-nowrap mb-4 overflow-hidden">
+      <header className="flex z-10 flex-col justify-center sm:text-center items-start h-screen px-10">
+        <h1 id='Home' className="text-[54px] sm:text-[24px] sm:ml-[0px] sm:text-center sm:whitespace-nowrap mb-4 ml-[130px] overflow-hidden">Hola, Soy Ramiro Hernández.</h1>
+        <h2 className="text-[59px] font-bold flex items-center ml-[130px] sm:text-[30px] sm:ml-[0px] sm:text-center sm:whitespace-nowrap mb-4 overflow-hidden">
           <span className="text-white mr-5">Software</span>
           <div className="relative flex items-center">
             <span className="text-orange-500">
@@ -58,8 +58,8 @@ function Home() {
             <span className={`text-orange-500 ${showCursor ? 'visible' : 'invisible'}`}>|</span>
           </div>
         </h2>
-        <div className='text-[59px] font-bold flex items-center'>
-          <span className="text-white ml-[690px] mt-[-90px] absolute sm:ml-[140px] sm:text-[35px] sm:mb-[-150px]">
+        <div className='text-[59px] sm:text-center font-bold flex items-center'>
+          <span className="text-white ml-[690px] mt-[-90px] absolute sm:text-center sm:ml-[125px] sm:text-[35px] sm:mb-[-150px]">
             &lt;/&gt;
           </span>
         </div>
