@@ -1,13 +1,31 @@
-import React from 'react'
+import React, { useState } from 'react';
+import { FaBars } from 'react-icons/fa';
 
 const Menu = () => {
-  return (
-    <div className='w-[69px] left-[20px] h-[47px] absolute cursor-pointer'>
-        <div className='w-[69px] h-[9px] left-0 top-[38px] bg-zinc-300'></div>
-        <div className='w-[69px] h-[9px] left-0 top-[19px] bg-neutral-500'></div>
-        <div className='w-[69px] h-[9px] left-0 top-[60px] bg-zinc-300'></div>
-    </div>
-  )
-}
+  const [isOpen, setIsOpen] = useState(false);
 
-export default Menu
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+  return (
+    <div className="lg:block fixed top-4 left-4 z-50">
+      <button onClick={toggleMenu} className="text-white text-4xl focus:outline-none">
+        <FaBars />
+      </button>
+      {isOpen && (
+        <div className="mt-4 bg-gray-800 text-white rounded-lg shadow-lg py-4 px-6">
+          <ul className="space-y-4">
+            <li><a href="#Inicio" onClick={toggleMenu}>Inicio</a></li>
+            <li><a href="#SobreMi" onClick={toggleMenu}>Sobre Mi</a></li>
+            <li><a href="#Proyectos" onClick={toggleMenu}>Proyectos</a></li>
+            <li><a href="#Tecnologias" onClick={toggleMenu}>Tecnologias</a></li>
+            <li><a href="#Contactame" onClick={toggleMenu}>Contactame</a></li>
+          </ul>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default Menu;
