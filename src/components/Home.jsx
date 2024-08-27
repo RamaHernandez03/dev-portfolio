@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import NavBar from './NavBar';
-import Menu from './Menu.jsx'
+import Menu from './Menu.jsx';
+import SecondNavBar from './SecondNavBar.jsx';
 
 function Home() {
   const [displayedText, setDisplayedText] = useState('');
@@ -8,6 +9,7 @@ function Home() {
   const [loopNum, setLoopNum] = useState(0);
   const [typingSpeed, setTypingSpeed] = useState(150);
   const [showCursor, setShowCursor] = useState(true);
+  const [showSecondNavBar, setShowSecondNavBar] = useState(false);
   const words = ['Developer', 'Wizard...'];
 
   useEffect(() => {
@@ -45,10 +47,29 @@ function Home() {
     return () => clearInterval(cursorInterval);
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setShowSecondNavBar(true);
+      } else {
+        setShowSecondNavBar(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <div className="min-h-screen bg-gray-900 text-white relative">
-      <div className="block lg:hidden">
-        <NavBar/>
+      <div className={`fixed top-0 left-0 w-full transition-opacity duration-[400ms] lg:hidden ${showSecondNavBar ? 'opacity-100 visible' : 'opacity-0 invisible'}`} style={{ zIndex: 50 }}>
+        <SecondNavBar />
+      </div>
+      <div className={`fixed top-0 left-0 w-full transition-opacity duration-[400ms] lg:hidden ${showSecondNavBar ? 'opacity-0 invisible' : 'opacity-100 visible'}`} style={{ zIndex: 40 }}>
+        <NavBar />
       </div>
       <div className="hidden lg:block">
         <Menu/>
