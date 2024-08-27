@@ -11,7 +11,7 @@ const Menu = () => {
 
   return (
     <div className="lg:block fixed z-50 p-5 w-full bg-gray-900">
-      <button onClick={toggleMenu} className="text-white text-4xl focus:outline-none">
+      <button onClick={toggleMenu} className="text-orange-500 text-4xl focus:outline-none">
         <FaBars/>
       </button>
       {isOpen && (
