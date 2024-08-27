@@ -22,7 +22,7 @@ const Menu = () => {
           <div className="flex flex-col items-center justify-center flex-grow">
           <ul className="text-4xl space-y-8 font-bold w-full">
             <li className="w-full">
-              <a href="#Inicio" className="block w-full text-center hover:bg-orange-500 py-2" onClick={toggleMenu}>Inicio</a>
+              <a href="#Home" className="block w-full text-center hover:bg-orange-500 py-2" onClick={toggleMenu}>Inicio</a>
             </li>
             <li className="w-full">
               <a href="#SobreMi" className="block w-full text-center hover:bg-orange-500 py-2" onClick={toggleMenu}>Sobre Mi</a>
