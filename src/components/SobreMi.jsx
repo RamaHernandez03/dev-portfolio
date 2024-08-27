@@ -10,11 +10,7 @@ const SobreMi = () => {
       </h2>
       <div className="bg-gray-700 p-10 sm:p-6 md:p-10 md:mb-10 shadow-[0px_12px_16px_rgba(0,0,0,0.2)] rounded-lg flex flex-row md:flex-col items-center md:items-center space-x-4 sm:space-x-6 md:space-x-0 md:space-y-6">
         <div className="flex flex-col items-center">
-          <img
-            src={SobreMiImage}
-            alt="Rama"
-            className="w-[300px] h-[300px] sm:w-[200px] sm:h-[200px] md:w-[300px] md:h-[300px] object-cover rounded-lg"
-          />
+          <img src={SobreMiImage} alt="Rama" className="w-[300px] h-[300px] sm:w-[200px] sm:h-[200px] md:w-[300px] md:h-[300px] object-cover rounded-lg"/>
           <p className="text-white mt-4 sm:mt-6 md:mt-8 text-lg sm:text-xl md:text-2xl font-bold">
             {'<Rama/>'}
           </p>

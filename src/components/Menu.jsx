@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { FaBars } from 'react-icons/fa';
+import { FaBars, FaTimes } from 'react-icons/fa';
+import Footer from './Footer.jsx';
 
 const Menu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,19 +10,35 @@ const Menu = () => {
   };
 
   return (
-    <div className="lg:block fixed top-4 left-4 z-50">
+    <div className="lg:block fixed z-50 p-5 w-full bg-gray-900">
       <button onClick={toggleMenu} className="text-white text-4xl focus:outline-none">
-        <FaBars />
+        <FaBars/>
       </button>
       {isOpen && (
-        <div className="mt-4 bg-gray-800 text-white rounded-lg shadow-lg py-4 px-6">
-          <ul className="space-y-4">
-            <li><a href="#Inicio" onClick={toggleMenu}>Inicio</a></li>
-            <li><a href="#SobreMi" onClick={toggleMenu}>Sobre Mi</a></li>
-            <li><a href="#Proyectos" onClick={toggleMenu}>Proyectos</a></li>
-            <li><a href="#Tecnologias" onClick={toggleMenu}>Tecnologias</a></li>
-            <li><a href="#Contactame" onClick={toggleMenu}>Contactame</a></li>
+        <div className="fixed inset-0 bg-gray-900 text-white flex flex-col justify-center text-center z-50">
+          <button onClick={toggleMenu} className="absolute top-4 right-4 text-white text-4xl focus:outline-none">
+            <FaTimes/>
+          </button>
+          <div className="flex flex-col items-center justify-center flex-grow">
+          <ul className="text-4xl space-y-8 font-bold w-full">
+            <li className="w-full">
+              <a href="#Inicio" className="block w-full text-center hover:bg-orange-500 py-2" onClick={toggleMenu}>Inicio</a>
+            </li>
+            <li className="w-full">
+              <a href="#SobreMi" className="block w-full text-center hover:bg-orange-500 py-2" onClick={toggleMenu}>Sobre Mi</a>
+            </li>
+            <li className="w-full">
+              <a href="#Proyectos" className="block w-full text-center hover:bg-orange-500 py-2" onClick={toggleMenu}>Proyectos</a>
+            </li>
+            <li className="w-full">
+              <a href="#Tecnologias" className="block w-full text-center hover:bg-orange-500 py-2" onClick={toggleMenu}>Tecnologias</a>
+            </li>
+            <li className="w-full">
+              <a href="#Contactame" className="block w-full text-center hover:bg-orange-500 py-2" onClick={toggleMenu}>Contactame</a>
+            </li>
           </ul>
+          </div>
+          <Footer/>
         </div>
       )}
     </div>
