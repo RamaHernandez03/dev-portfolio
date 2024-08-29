@@ -9,6 +9,15 @@ module.exports = {
         littleGray: '#474747',
         midNightBlue: '#14213d',
       },
+      keyframes: {
+        slideUp: {
+          '0%': { transform: 'translateY(30px)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+      },
+      animation: {
+        slideUp: 'slideUp 1s ease-out forwards',
+      },
     },
     screens: {
       ssm: { max: "479px" },

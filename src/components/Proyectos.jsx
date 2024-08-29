@@ -1,6 +1,7 @@
 import React from 'react';
 import matesMood from '../assets/matesmood.png';
 import github from '../assets/github.webp';
+import { useInView } from 'react-intersection-observer';
 
 
 const ProjectCard = ({ image, title, description, link }) => {
@@ -24,6 +25,10 @@ const ProjectCard = ({ image, title, description, link }) => {
     );
 };
 const Projects = () => {
+    const { ref, inView } = useInView({
+      triggerOnce: true,
+      threshold: 0.1,
+    });
     const projectData = [
       {
         image: matesMood,
@@ -46,8 +51,9 @@ const Projects = () => {
     ];
   return (
     <div className="bg-gray-900 p-10 min-h-screen flex flex-col items-center justify-center">
-      <div className="text-center mb-20">
-        <h2 id='Proyectos' className="text-white text-[40px] font-bold pb-[10px] border-b-4 border-orange-500">Proyectos</h2>
+      <div ref={ref} className={`transition-transform duration-500 ${inView ? 'animate-slideUp' : 'opacity-0'}`}>
+      <div className="text-center mb-20 flex justify-center items-centers">
+        <h2 id='Proyectos' className="text-white inline-block text-[40px] font-bold pb-[10px] border-b-4 border-orange-500">Proyectos</h2>
       </div>
       <div className="grid grid-cols-3 md:grid-cols-2 lg:grid-cols-1 gap-6 w-full max-w-6xl">
         {projectData.map((project, index) => (
@@ -59,6 +65,7 @@ const Projects = () => {
             link={project.link}
           />
         ))}
+      </div>
       </div>
     </div>
   );
