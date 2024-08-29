@@ -19,7 +19,7 @@ const SobreMi = () => {
           <div className="flex flex-col items-center">
             <img
               src={SobreMiImage}
-              alt="Rama"
+              alt="Ramiro Hernandez"
               className="w-[300px] h-[300px] sm:w-[200px] sm:h-[200px] md:w-[300px] md:h-[300px] object-cover rounded-lg"
             />
             <p className="text-white mt-4 sm:mt-6 md:mt-8 text-lg sm:text-xl md:text-2xl font-bold">
