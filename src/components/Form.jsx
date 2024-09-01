@@ -4,13 +4,16 @@ import { FaInstagram, FaWhatsapp, FaLinkedin } from 'react-icons/fa';
 
 const Form = () => {
   const { ref, inView } = useInView({
-    triggerOnce: true,
+    triggerOnce: false, // Cambiado a false
     threshold: 0.1,
   });
+
   return (
     <div className='h-screen w-screen flex flex-col items-center justify-center bg-gray-800'>
       <div ref={ref} className={`transition-transform duration-500 ${inView ? 'animate-slideUp' : 'opacity-0'}`}>
-      <h2 id='Contactame' className='font-semibold z-30 text-[40px] text-white mb-[60px] pb-[10px] border-b-4 border-orange-500'>Contactame</h2>
+        <h2 id='Contactame' className='font-semibold z-30 text-[40px] text-white mb-[60px] pb-[10px] border-b-4 border-orange-500'>
+          Contactame
+        </h2>
       </div>
       <motion.div
         initial={{ opacity: 0, y: 30 }}
