@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';  // Importa el Router
+import "./index.css";
+import { BrowserRouter as Router } from 'react-router-dom';  
 import Home from './components/Home.jsx';
 import SobreMi from './components/SobreMi.jsx';
 import Proyectos from './components/Proyectos.jsx';
