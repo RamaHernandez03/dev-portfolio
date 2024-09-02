@@ -1,13 +1,24 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-scroll';
 import { useInView } from 'react-intersection-observer';
 import SobreMiImage from '../assets/SobreMi.jpeg';
 
 const SobreMi = () => {
   const { ref, inView } = useInView({
-    triggerOnce: false,  // Cambia triggerOnce a false
+    triggerOnce: false, 
     threshold: 0.1,
   });
+
+  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 640);
+
+  const handleResize = () => {
+    setIsSmallScreen(window.innerWidth <= 767);
+  };
+
+  useEffect(() => {
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   return (
     <div className="min-h-screen w-full flex flex-col items-center justify-center bg-gray-800 p-4 md:p-8">
@@ -27,26 +38,38 @@ const SobreMi = () => {
             </p>
           </div>
           <div className="text-white text-left md:text-center px-2 sm:px-4 md:px-0">
-            <p className="text-[24px] sm:text-[18px] md:text-[16px] mb-2 sm:mb-3 md:mb-4">
-              Soy un entusiasta de la <span className="text-orange-500">Programacion</span> y de las <span className="text-orange-500">Nuevas Tecnologias</span>
-            </p>
-            <p className="text-[24px] sm:text-[18px] md:text-[16px] mb-2 sm:mb-3 md:mb-4">
-              que reside en la Ciudad de Buenos Aires. Mientras avanzo en
-            </p>
-            <p className="text-[24px] sm:text-[18px] md:text-[16px] mb-2 sm:mb-3 md:mb-4">
-              la carrera de <span className='text-orange-500'>Ingenieria Informatica</span> en la UBA, Me impulsa 
-            </p>
-            <p className="text-[24px] sm:text-[18px] md:text-[16px] mb-2 sm:mb-3 md:mb-4">
-              una pasion por el aprendizaje de nuevas herramientas 
-            </p>
-            <p className="text-[24px] sm:text-[18px] md:text-[16px] mb-2 sm:mb-3 md:mb-4">
-              que me potencien a la hora de <span className="text-orange-500">Solucionar Problemas.</span>
-            </p>
-            <p className="text-[24px] sm:text-[18px] md:text-[16px] mb-2 sm:mb-3 md:mb-4">
-              ¿Queres que hagamos algo increible juntos? Hace  <span className="text-orange-500 font-bold underline inline-block hover:translate-y-[-7px] transition-transform duration-500">
-                <Link to="Contactame" smooth={true} duration={500}>¡Click Aqui!</Link>
-              </span>
-            </p>
+            {isSmallScreen ? (
+              <p className="text-[22px] text-justify mb-2 sm:mb-3 md:mb-4">
+                Soy un entusiasta de la <span className="text-orange-500">Programación</span> y de las <span className="text-orange-500">Nuevas Tecnologías</span> que reside en la Ciudad de Buenos Aires. Mientras avanzo en la carrera de <span className="text-orange-500">Ingeniería Informática</span> en la UBA, me impulsa una pasión por el aprendizaje de nuevas herramientas que me potencien a la hora de <span className="text-orange-500">Solucionar Problemas.</span> ¿Querés que hagamos algo increíble juntos? Hace 
+                <span className="text-orange-500 font-bold underline inline-block ml-[10px] hover:translate-y-[-7px] transition-transform duration-500">
+                  <Link to="Contactame" smooth={true} duration={500}>¡Click Aquí!</Link>
+                </span>
+              </p>
+            ) : (
+              <>
+                <p className="text-[24px] sm:text-[14px] mb-2 sm:mb-3 md:mb-4">
+                  Soy un entusiasta de la <span className="text-orange-500">Programación</span> y de las <span className="text-orange-500">Nuevas Tecnologías</span>
+                </p>
+                <p className="text-[24px] sm:text-[14px] mb-2 sm:mb-3 md:mb-4">
+                  que reside en la Ciudad de Buenos Aires. Mientras avanzo en
+                </p>
+                <p className="text-[24px] sm:text-[14px] mb-2 sm:mb-3 md:mb-4">
+                  la carrera de <span className='text-orange-500'>Ingeniería Informática</span> en la UBA, me impulsa 
+                </p>
+                <p className="text-[24px] sm:text-[14px] mb-2 sm:mb-3 md:mb-4">
+                  una pasión por el aprendizaje de nuevas herramientas 
+                </p>
+                <p className="text-[24px] sm:text-[14px] mb-2 sm:mb-3 md:mb-4">
+                  que me potencien a la hora de <span className="text-orange-500">Solucionar Problemas.</span>
+                </p>
+                <p className="text-[24px] sm:text-[14px] mb-2 sm:mb-3 md:mb-4">
+                  ¿Querés que hagamos algo increíble juntos? Hace  
+                  <span className="text-orange-500 font-bold underline inline-block hover:translate-y-[-7px] ml-[5px] transition-transform duration-500">
+                    <Link to="Contactame" smooth={true} duration={500}>¡Click Aquí!</Link>
+                  </span>
+                </p>
+              </>
+            )}
           </div>
         </div>
       </div>

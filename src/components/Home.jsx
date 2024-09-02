@@ -76,23 +76,25 @@ function Home() {
         <Menu/>
       </div>
       <header className="flex z-10 flex-col justify-center sm:text-center items-start h-screen px-10">
+  <div className='sm:text-center justify-center'>
   <motion.h1
     initial={{ opacity: 0, x: -100 }}
     whileInView={{ opacity: 1, x: 0 }}
     transition={{ duration: 0.6, ease: 'easeOut' }}
     onViewportEnter={() => console.log('H1 in view')}
     id='Home'
-    className="text-[54px] sm:text-[24px] sm:ml-[0px] sm:text-center sm:whitespace-nowrap mb-4 ml-[130px] overflow-hidden"
+    className="text-[40px] sm:text-[24px] md:ml-[0px] sm:text-center sm:whitespace-nowrap mb-4 ml-[130px] overflow-hidden"
   >
     Hola, Soy Ramiro Hernández.
   </motion.h1>
-  
+  </div>
+  <div className='sm:text-center justify-center'>
   <motion.h2
     initial={{ opacity: 0, x: -100 }}
     whileInView={{ opacity: 1, x: 0 }}
     transition={{ duration: 0.6, ease: 'easeOut' }}
     onViewportEnter={() => console.log('H2 in view')}
-    className="text-[59px] font-bold flex items-center ml-[130px] sm:text-[30px] sm:ml-[0px] sm:text-center sm:whitespace-nowrap mb-4 overflow-hidden"
+    className="text-[50px] font-bold flex items-center ml-[130px] sm:text-[30px] md:ml-[0px] sm:text-center sm:whitespace-nowrap mb-4 overflow-hidden"
   >
     <span className="text-white mr-5">Software</span>
     <div className="relative flex items-center">
@@ -102,7 +104,7 @@ function Home() {
       <span className={`text-orange-500 ${showCursor ? 'visible' : 'invisible'}`}>|</span>
     </div>
   </motion.h2>
-  
+  </div>
 </header>
     </div>
   );
