@@ -34,7 +34,7 @@ const Projects = () => {
     {
       image: matesMood,
       title: 'Web Matesmood',
-      description: 'Proyecto Freelance para una Empresa de venta de mates y materas.',
+      description: 'Proyecto Freelance para una Empresa de venta de mates y materas. - 2022',
       link: 'https://matesmood.netlify.app/',
     },
     {
