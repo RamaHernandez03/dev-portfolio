@@ -13,22 +13,22 @@ import { useInView } from 'react-intersection-observer';
 
 function Tecnologias() {
   const { ref: refTitle, inView: inViewTitle } = useInView({
-    triggerOnce: false, // Cambiado a false
+    triggerOnce: false,
     threshold: 0.1,
   });
 
   const { ref: refFrontEnd, inView: inViewFrontEnd } = useInView({
-    triggerOnce: false, // Cambiado a false
+    triggerOnce: false,
     threshold: 0.1,
   });
 
   const { ref: refExtras, inView: inViewExtras } = useInView({
-    triggerOnce: false, // Cambiado a false
+    triggerOnce: false,
     threshold: 0.1,
   });
 
   const { ref: refBackEnd, inView: inViewBackEnd } = useInView({
-    triggerOnce: false, // Cambiado a false
+    triggerOnce: false,
     threshold: 0.1,
   });
 

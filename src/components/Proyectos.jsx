@@ -26,7 +26,7 @@ const ProjectCard = ({ image, title, description, link }) => {
 
 const Projects = () => {
   const { ref, inView } = useInView({
-    triggerOnce: false,  // Cambia triggerOnce a false
+    triggerOnce: false,  
     threshold: 0.1,
   });
 

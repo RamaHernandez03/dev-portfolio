@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import NavBar from './NavBar';
 import Menu from './Menu.jsx';
 import SecondNavBar from './SecondNavBar.jsx';
-import particlesConfig from '../particlesjs-config.json'; // Importa la configuración de partículas
+import particlesConfig from '../particlesjs-config.json';
 
 function Home() {
   const [displayedText, setDisplayedText] = useState('');

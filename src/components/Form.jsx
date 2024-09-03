@@ -4,7 +4,7 @@ import { FaInstagram, FaWhatsapp, FaLinkedin } from 'react-icons/fa';
 
 const Form = () => {
   const { ref, inView } = useInView({
-    triggerOnce: false, // Cambiado a false
+    triggerOnce: false, 
     threshold: 0.1,
   });
 
