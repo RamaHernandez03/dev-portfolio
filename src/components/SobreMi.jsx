@@ -39,7 +39,7 @@ const SobreMi = () => {
           </div>
           <div className="text-white text-left md:text-center px-2 sm:px-4 md:px-0">
             {isSmallScreen ? (
-              <p className="text-[22px] text-justify mb-2 sm:mb-3 md:mb-4">
+              <p className="text-[22px] text-center mb-2 sm:mb-3 md:mb-4">
                 Soy programador <span className='text-orange-500 font-semibold'>Full stack</span> con experiencia en el desarrollo de aplicaciones web, con especial interés en <span className='text-orange-500 font-semibold'>crear soluciones escalables y funcionales.</span> Disfruto enfrentar desafíos técnicos y pensar en cómo resolver problemas de manera práctica y eficiente. Me considero una persona <span className='text-orange-500 font-semibold'>adaptable, proactiva y con buena comunicación</span>, lo que me permite integrarme rapidamente en equipos de trabajo y <span className='text-orange-500 font-semibold'>resolver problemas</span>  de manera eficaz.
               </p>
             ) : (
