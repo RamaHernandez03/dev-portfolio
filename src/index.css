@@ -37,3 +37,22 @@ code {
 ::-webkit-scrollbar-thumb:hover {
   background-color: #fb923c; 
 }
+
+.p-carousel .p-carousel-prev,
+.p-carousel .p-carousel-next {
+  background-color: #f97316; /* orange-500 */
+  border-radius: 9999px;
+  color: white;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.p-carousel .p-carousel-prev:hover,
+.p-carousel .p-carousel-next:hover {
+  background-color: #ea580c; /* orange-600 */
+}

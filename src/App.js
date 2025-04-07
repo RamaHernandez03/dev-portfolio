@@ -7,6 +7,8 @@ import Proyectos from './components/Proyectos.jsx';
 import Tecnologias from './components/Tecnologias.jsx';
 import Form from './components/Form.jsx';
 import Footer from './components/Footer.jsx';
+import { PrimeReactProvider, PrimeReactContext } from 'primereact/api';
+        
 
 function App() {
   return (

@@ -40,33 +40,24 @@ const SobreMi = () => {
           <div className="text-white text-left md:text-center px-2 sm:px-4 md:px-0">
             {isSmallScreen ? (
               <p className="text-[22px] text-justify mb-2 sm:mb-3 md:mb-4">
-                Soy un entusiasta de la <span className="text-orange-500">Programación</span> y de las <span className="text-orange-500">Nuevas Tecnologías</span> que reside en la Ciudad de Buenos Aires. Mientras avanzo en la carrera de <span className="text-orange-500">Ingeniería Informática</span> en la UBA, me impulsa una pasión por el aprendizaje de nuevas herramientas que me potencien a la hora de <span className="text-orange-500">Solucionar Problemas.</span> ¿Querés que hagamos algo increíble juntos? Hace 
-                <span className="text-orange-500 font-bold underline inline-block ml-[10px] hover:translate-y-[-7px] transition-transform duration-500">
-                  <Link to="Contactame" smooth={true} duration={500}>¡Click Aquí!</Link>
-                </span>
+                Soy programador <span className='text-orange-500 font-semibold'>Full stack</span> con experiencia en el desarrollo de aplicaciones web, con especial interés en <span className='text-orange-500 font-semibold'>crear soluciones escalables y funcionales.</span> Disfruto enfrentar desafíos técnicos y pensar en cómo resolver problemas de manera práctica y eficiente. Me considero una persona <span className='text-orange-500 font-semibold'>adaptable, proactiva y con buena comunicación</span>, lo que me permite integrarme rapidamente en equipos de trabajo y <span className='text-orange-500 font-semibold'>resolver problemas</span>  de manera eficaz.
               </p>
             ) : (
               <>
                 <p className="text-[24px] sm:text-[14px] mb-2 sm:mb-3 md:mb-4">
-                  Soy un entusiasta de la <span className="text-orange-500">Programación</span> y de las <span className="text-orange-500">Nuevas Tecnologías</span>
+                Soy programador <span className='text-orange-500 font-semibold'>Full stack</span> con experiencia en el desarrollo de aplicaciones web,
                 </p>
                 <p className="text-[24px] sm:text-[14px] mb-2 sm:mb-3 md:mb-4">
-                  que reside en la Ciudad de Buenos Aires. Mientras avanzo en
+                con especial interés en <span className='text-orange-500 font-semibold'>crear soluciones escalables y funcionales.</span>
                 </p>
                 <p className="text-[24px] sm:text-[14px] mb-2 sm:mb-3 md:mb-4">
-                  la carrera de <span className='text-orange-500'>Ingeniería Informática</span> en la UBA, me impulsa 
+                Disfruto enfrentar desafíos técnicos y pensar en cómo resolver problemas de manera práctica y eficiente.
                 </p>
                 <p className="text-[24px] sm:text-[14px] mb-2 sm:mb-3 md:mb-4">
-                  una pasión por el aprendizaje de nuevas herramientas 
+                Me considero una persona <span className='text-orange-500 font-semibold'>adaptable, proactiva y con buena comunicación</span>,
                 </p>
                 <p className="text-[24px] sm:text-[14px] mb-2 sm:mb-3 md:mb-4">
-                  que me potencien a la hora de <span className="text-orange-500">Solucionar Problemas.</span>
-                </p>
-                <p className="text-[24px] sm:text-[14px] mb-2 sm:mb-3 md:mb-4">
-                  ¿Querés que hagamos algo increíble juntos? Hace  
-                  <span className="text-orange-500 font-bold underline inline-block hover:translate-y-[-7px] ml-[5px] transition-transform duration-500">
-                    <Link to="Contactame" smooth={true} duration={500}>¡Click Aquí!</Link>
-                  </span>
+                lo que me permite integrarme rapidamente en equipos de trabajo y <span className='text-orange-500 font-semibold'>resolver problemas</span> de manera eficaz.
                 </p>
               </>
             )}
