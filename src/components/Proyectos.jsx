@@ -32,12 +32,6 @@ const Projects = () => {
       description: 'Web desarrollada desde 0 con puro HTML, CSS Y JS (2022)',
       link: 'https://matesmood.netlify.app/',
     },
-    {
-      image: github,
-      title: 'Publicidad',
-      description: 'Campañas segmentadas en Meta Ads e Instagram.',
-      link: 'publicidad3',
-    },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
