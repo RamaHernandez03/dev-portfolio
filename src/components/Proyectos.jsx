@@ -12,7 +12,7 @@ const Projects = () => {
       image: escribania,
       title: 'Escribania La Riva',
       description: 'Desarrolle su web desde 0 utilizando React/NodeJs (2025)',
-      link: 'https://escribanialariva.vercel.app/',
+      link: 'https://escribanialariva.com/',
     },
     {
       image: abogada,
