@@ -3,7 +3,7 @@ import Servicios from './Cards.jsx';
 import github from '../assets/github.webp';
 import deudas from '../assets/deudas.png';
 import escribania from '../assets/escribania.png';
-import abogada from '../assets/abogada.png';
+import abogada from '../assets/GISELA_NUEVO.png';
 import charizard from '../assets/Charizard.jpeg';
 import matesmood from '../assets/matesmood.png';
 
