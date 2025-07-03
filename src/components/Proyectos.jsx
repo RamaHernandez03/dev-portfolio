@@ -24,7 +24,7 @@ const Projects = () => {
     {
       image: deudas,
       title: 'Soluciona tus deudas',
-      description: 'Sistema de busqueda del estado de deudas del usuario, fetcheando datos de la api del BCRA. Desarrollada con HTML, CSS, PHP y JavaScript. Sumado a una pasarela de pagos CheckoutPro de Mercado Pago. (2025)',
+      description: 'Sistema de busqueda de deudas del usuario, fetcheando datos de la api del BCRA. Utilice HTML, CSS, PHP y JS. Sumado al servicio CheckoutPro de Mercado Pago. (2025)',
       link: 'https://solucionatusdeudas.com.ar/',
     },
     {
