@@ -49,15 +49,21 @@ const Projects = () => {
 
   const updateLayout = useCallback(() => {
     const screenWidth = window.innerWidth;
-    const newVisibleCards = screenWidth < 768 ? 1 : 3;
+    let newVisibleCards;
+    
+    if (screenWidth < 640) {
+      newVisibleCards = 1;
+    } else if (screenWidth < 1024) {
+      newVisibleCards = 2;
+    } else {
+      newVisibleCards = 3;
+    }
+    
     setVisibleCards(newVisibleCards);
 
     if (containerRef.current) {
       const containerWidth = containerRef.current.offsetWidth;
-      const newCardWidth =
-        screenWidth < 768
-          ? containerWidth
-          : (containerWidth - gap * (newVisibleCards - 1)) / newVisibleCards;
+      const newCardWidth = (containerWidth - gap * (newVisibleCards - 1)) / newVisibleCards;
       setCardWidth(newCardWidth);
     }
   }, []);
@@ -89,7 +95,7 @@ const Projects = () => {
         <button
           onClick={prevSlide}
           disabled={currentIndex === 0}
-          className={`absolute -left-8 z-10 bg-orange-500 text-white p-3 rounded-full shadow-md hover:bg-orange-600 transition ${
+          className={`absolute left-0 sm:-left-8 z-10 bg-orange-500 text-white p-2 sm:p-3 rounded-full shadow-md hover:bg-orange-600 transition ${
             currentIndex === 0 ? 'opacity-50 cursor-not-allowed' : ''
           }`}
         >
@@ -98,20 +104,26 @@ const Projects = () => {
 
         {/* Contenedor Carrusel */}
         <div
-          className="overflow-hidden w-full py-4"
+          className="overflow-hidden w-full py-4 mx-8 sm:mx-12"
           ref={containerRef}
         >
           <div
-            className="flex transition-transform duration-500 ease-in-out gap-4"
+            className="flex transition-transform duration-500 ease-in-out"
             style={{
               transform: `translateX(-${currentIndex * (cardWidth + gap)}px)`,
-              width: `${(cardWidth + gap) * serviciosData.length}px`,
-              justifyContent: visibleCards === 1 ? 'center' : 'flex-start',
+              gap: `${gap}px`,
             }}
           >
             {serviciosData.map((servicio, index) => (
-              <div key={index} style={{ width: `${cardWidth}px`, flexShrink: 0 }}>
-                <Servicios {...servicio} />
+              <div 
+                key={index} 
+                style={{ 
+                  width: `${cardWidth}px`,
+                  minWidth: `${cardWidth}px`,
+                  flexShrink: 0 
+                }}
+              >
+                <Servicios {...servicio} cardWidth={cardWidth} />
               </div>
             ))}
           </div>
@@ -121,7 +133,7 @@ const Projects = () => {
         <button
           onClick={nextSlide}
           disabled={currentIndex >= serviciosData.length - visibleCards}
-          className={`absolute -right-8 z-10 bg-orange-500 text-white p-3 rounded-full shadow-md hover:bg-orange-600 transition ${
+          className={`absolute right-0 sm:-right-8 z-10 bg-orange-500 text-white p-2 sm:p-3 rounded-full shadow-md hover:bg-orange-600 transition ${
             currentIndex >= serviciosData.length - visibleCards
               ? 'opacity-50 cursor-not-allowed'
               : ''
