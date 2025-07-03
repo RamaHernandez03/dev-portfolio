@@ -12,19 +12,19 @@ const Projects = () => {
     {
       image: escribania,
       title: 'Escribania La Riva',
-      description: 'Desarrolle su web desde 0 utilizando React/NodeJs (2025)',
+      description: 'Pagina informativa sobre los servicios de la Escribania La Riva. Desarrolle su web desde 0 utilizando React/NodeJs (2025)',
       link: 'https://escribanialariva.com/',
     },
     {
       image: abogada,
       title: 'Gisela Rios Abogada',
-      description: 'Desarrolle la web utilizando Wordpress + Enflod Theme (PHP,HTML,CSS,JS) (2024)',
+      description: 'Pagina informativa sobre los servicios de la abogada Gisela Rios. Desarrolle la web utilizando Wordpress + Enflod Theme (PHP,HTML,CSS,JS) (2024)',
       link: 'https://giselariosabogada.com/',
     },
     {
       image: deudas,
       title: 'Soluciona tus deudas',
-      description: 'Pagina desarrollada con HTML, CSS, PHP y JavaScript.',
+      description: 'Sistema de busqueda del estado de deudas del usuario, fetcheando datos de la api del BCRA. Desarrollada con HTML, CSS, PHP y JavaScript. Sumado a una pasarela de pagos CheckoutPro de Mercado Pago. (2025)',
       link: 'https://solucionatusdeudas.com.ar/',
     },
     {
@@ -36,7 +36,7 @@ const Projects = () => {
     {
       image: matesmood,
       title: 'Matesmood',
-      description: 'Web desarrollada desde 0 con puro HTML, CSS Y JS (2022)',
+      description: 'Pagina informativa sobre los productos del emprendimiento Matesmood. Web desarrollada desde 0 con HTML, CSS Y JS (2022)',
       link: 'https://matesmood.netlify.app/',
     },
   ];
