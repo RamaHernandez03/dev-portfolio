@@ -81,7 +81,7 @@ const Projects = () => {
   return (
     <div className="bg-gray-900 p-10 min-h-screen flex flex-col items-center justify-center">
       <h2 className="font-semibold text-center pb-[10px] border-b-4 border-orange-500 text-[40px] sm:text-[30px] md:pb-5 sm:pb-[5px] md:text-[40px] text-white mb-[40px] sm:mb-[40px] md:mb-[80px]">
-        Servicios
+        Proyectos
       </h2>
 
       <div className="w-full max-w-7xl relative flex items-center justify-center px-6 sm:px-10">
