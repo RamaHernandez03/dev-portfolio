@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import Servicios from './Cards.jsx';
 import github from '../assets/github.webp';
+import deudas from '../assets/deudas.png';
 import escribania from '../assets/escribania.png';
 import abogada from '../assets/abogada.png';
 import charizard from '../assets/Charizard.jpeg';
@@ -19,6 +20,12 @@ const Projects = () => {
       title: 'Gisela Rios Abogada',
       description: 'Desarrolle la web utilizando Wordpress + Enflod Theme (PHP,HTML,CSS,JS) (2024)',
       link: 'https://giselariosabogada.com/',
+    },
+    {
+      image: deudas,
+      title: 'Soluciona tus deudas',
+      description: 'Pagina desarrollada con HTML, CSS, PHP y JavaScript.',
+      link: 'https://solucionatusdeudas.com.ar/',
     },
     {
       image: charizard,
