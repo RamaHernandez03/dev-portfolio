@@ -8,7 +8,7 @@ const Servicios = ({ image, title, description, link }) => {
 
       <div className="p-4 flex flex-col flex-grow justify-between items-center text-center">
         <h2 className="text-[#F5F1EB] text-xl font-semibold mb-2">{title}</h2>
-        <p className="text-[#F5F1EB] text-lg flex-grow">{description}</p>
+        <p className="text-[#F5F1EB] text-lg flex-grow text-justify justify-center">{description}</p>
         <a 
             href={link} // sin `/` ni nada antes
             target="_blank" 
