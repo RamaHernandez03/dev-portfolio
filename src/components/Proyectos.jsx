@@ -32,7 +32,7 @@ const Projects = () => {
       image: scraper,
       title: 'Instagram Bot',
       description: 'Scrapea los seguidos de una cuenta objetivo y los sigue de manera automatizada (2024)',
-      link: 'https://github.com/RamaHernandez03/pokemon.py.git',
+      link: 'https://github.com/RamaHernandez03/usersBot',
     },
     {
       image: charizard,
