@@ -4,6 +4,7 @@ import github from '../assets/github.webp';
 import deudas from '../assets/deudas.png';
 import escribania from '../assets/escribania.png';
 import abogada from '../assets/GISELA_NUEVO.png';
+import scraper from '../assets/scraper.jpeg';
 import charizard from '../assets/Charizard.jpeg';
 import matesmood from '../assets/matesmood.png';
 
@@ -26,6 +27,12 @@ const Projects = () => {
       title: 'Soluciona tus deudas',
       description: 'Sistema de busqueda de deudas del usuario, fetcheando datos de la api del BCRA. Utilice HTML, CSS, PHP y JS. Sumado al servicio CheckoutPro de Mercado Pago. (2025)',
       link: 'https://solucionatusdeudas.com.ar/',
+    },
+    {
+      image: scraper,
+      title: 'Instagram Bot',
+      description: 'Scrapea los seguidos de una cuenta objetivo y los sigue de manera automatizada (2024)',
+      link: 'https://github.com/RamaHernandez03/pokemon.py.git',
     },
     {
       image: charizard,
