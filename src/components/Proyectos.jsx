@@ -14,7 +14,7 @@ const Projects = () => {
       image: escribania,
       title: 'Escribania La Riva',
       description: 'Pagina informativa sobre los servicios de la Escribania La Riva. Desarrolle su web desde 0 utilizando React/NodeJs (2025)',
-      link: 'https://escribanialariva.com/',
+      link: 'https://www.escribanialariva.com/',
     },
     {
       image: abogada,
