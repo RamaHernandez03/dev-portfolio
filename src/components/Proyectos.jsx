@@ -20,7 +20,7 @@ const Projects = () => {
     {
       image: cotizamin,
       title: 'cotizamin',
-      description: 'Sistema de gestion de stock para proovedores, recibiendo feedback via IA de sus productos y sus precios',
+      description: 'Sistema de gestion de stock para proovedores, recibiendo feedback via IA de sus productos y sus precios. Desarrollada con NextJs, PostgreSQL, N8N (2025).',
       link: 'https://cotizamin.vercel.app/',
     },
     {
