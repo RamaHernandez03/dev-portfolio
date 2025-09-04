@@ -7,6 +7,7 @@ import abogada from '../assets/GISELA_NUEVO.png';
 import scraper from '../assets/scraper.jpeg';
 import charizard from '../assets/Charizard.jpeg';
 import matesmood from '../assets/matesmood.png';
+import cotizamin from '../assets/cotizamin.png';
 
 const Projects = () => {
   const serviciosData = [
@@ -15,6 +16,12 @@ const Projects = () => {
       title: 'Escribania La Riva',
       description: 'Pagina informativa sobre los servicios de la Escribania La Riva. Desarrolle su web desde 0 utilizando React/NodeJs (2025)',
       link: 'https://www.escribanialariva.com/',
+    },
+    {
+      image: cotizamin,
+      title: 'cotizamin',
+      description: 'Sistema de gestion de stock para proovedores, recibiendo feedback via IA de sus productos y sus precios',
+      link: 'https://cotizamin.vercel.app/',
     },
     {
       image: abogada,
