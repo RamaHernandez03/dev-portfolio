@@ -27,6 +27,17 @@ const Form = () => {
         </div>
 
         <div className="rounded-2xl border border-gray-600 bg-gray-700 p-5 shadow-2xl sm:p-8">
+          <div className="mb-7 text-center text-white">
+            <h3 className="mb-4 text-lg font-semibold">Hablemos por:</h3>
+            <div className="flex justify-center gap-8">
+              {[['Instagram', 'https://www.instagram.com/ramahernandezz', FaInstagram], ['WhatsApp', 'https://wa.link/zu5elf', FaWhatsapp], ['LinkedIn', 'https://www.linkedin.com/in/ramahernandez03', FaLinkedin]].map(([label, href, Icon]) => (
+                <a key={label} href={href} target="_blank" rel="noopener noreferrer" aria-label={label} className="text-orange-500 transition hover:scale-110 hover:text-orange-600">
+                  <Icon size={40} />
+                </a>
+              ))}
+            </div>
+            <p className="mt-5 text-base font-semibold">O completá el formulario:</p>
+          </div>
           <form name="contacto" method="POST" data-netlify="true" netlify-honeypot="bot-field" onSubmit={handleSubmit} className="grid gap-5 text-left sm:grid-cols-2">
             <input type="hidden" name="form-name" value="contacto" />
             <p className="hidden"><label>No completes este campo: <input name="bot-field" /></label></p>
@@ -39,13 +50,8 @@ const Form = () => {
             <label className="text-sm font-semibold text-gray-100 sm:col-span-2">Mensaje
               <textarea required name="message" placeholder="¿En qué puedo ayudarte?" className="mt-2 w-full resize-none rounded-lg border border-gray-500 bg-gray-900 px-4 py-3 text-white placeholder-gray-500 outline-none transition focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20" rows="5" />
             </label>
-            <div className="flex items-center gap-3 sm:col-span-2 sm:justify-between">
-              <div className="hidden gap-2 sm:flex">
-                {[['Instagram', 'https://www.instagram.com/ramahernandezz', FaInstagram], ['WhatsApp', 'https://wa.link/zu5elf', FaWhatsapp], ['LinkedIn', 'https://www.linkedin.com/in/ramahernandez03', FaLinkedin]].map(([label, href, Icon]) => (
-                  <a key={label} href={href} target="_blank" rel="noopener noreferrer" aria-label={label} className="rounded-lg border border-gray-500 p-2.5 text-gray-300 transition hover:border-orange-500 hover:text-orange-500"><Icon size={19} /></a>
-                ))}
-              </div>
-              <button disabled={status === 'sending'} type="submit" className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-orange-500 px-7 py-3 font-bold text-white transition hover:bg-orange-600 disabled:opacity-70 sm:w-auto">
+            <div className="sm:col-span-2">
+              <button disabled={status === 'sending'} type="submit" className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-orange-500 px-7 py-3 font-bold text-white transition hover:bg-orange-600 disabled:opacity-70">
                 {status === 'sending' ? 'Enviando…' : <>Enviar mensaje <FaPaperPlane size={14} /></>}
               </button>
             </div>
