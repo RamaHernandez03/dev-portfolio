@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-scroll';
 import { useInView } from 'react-intersection-observer';
 import SobreMiImage from '../assets/fotobrc.jpeg';
 

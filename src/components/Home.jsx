@@ -5,6 +5,8 @@ import Menu from './Menu.jsx';
 import SecondNavBar from './SecondNavBar.jsx';
 import particlesConfig from '../particlesjs-config.json';
 
+const words = ['Developer', 'Wizard...'];
+
 function Home() {
   const [displayedText, setDisplayedText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
@@ -12,7 +14,6 @@ function Home() {
   const [typingSpeed, setTypingSpeed] = useState(150);
   const [showCursor, setShowCursor] = useState(true);
   const [showSecondNavBar, setShowSecondNavBar] = useState(false);
-  const words = ['Developer', 'Wizard...'];
 
   useEffect(() => {
     let typingTimeout;
@@ -39,7 +40,7 @@ function Home() {
     typingTimeout = setTimeout(handleType, typingSpeed);
 
     return () => clearTimeout(typingTimeout);
-  }, [displayedText, isDeleting, loopNum]);
+  }, [displayedText, isDeleting, loopNum, typingSpeed]);
 
   useEffect(() => {
     const cursorInterval = setInterval(() => {

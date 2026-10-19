@@ -1,69 +1,80 @@
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import { FaInstagram, FaWhatsapp, FaLinkedin } from 'react-icons/fa';
+import { useState } from 'react';
+import { FaInstagram, FaWhatsapp, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+
+const encode = (data) => new URLSearchParams(data).toString();
 
 const Form = () => {
-  const { ref, inView } = useInView({
-    triggerOnce: false, 
-    threshold: 0.1,
-  });
+  const [status, setStatus] = useState('idle');
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    setStatus('sending');
+    const formData = new FormData(event.currentTarget);
+
+    try {
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: encode(Object.fromEntries(formData)),
+      });
+      if (!response.ok) throw new Error('No se pudo enviar');
+      event.currentTarget.reset();
+      setStatus('sent');
+    } catch (error) {
+      setStatus('error');
+    }
+  };
 
   return (
-    <div className='h-screen w-screen flex flex-col items-center justify-center bg-gray-800'>
-      <div ref={ref} className={`transition-transform duration-500 ${inView ? 'animate-slideUp' : 'opacity-0'}`}>
-        <h2 id='Contactame' className='font-semibold z-30 text-[40px] text-white mb-[60px] pb-[10px] border-b-4 border-orange-500'>
-          Contactame
-        </h2>
-      </div>
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        className="bg-gray-700 p-10 mb-[60px] shadow-[0px_12px_16px_rgba(0,0,0,0.2)] rounded-lg flex flex-col items-center w-2/3 max-w-3xl sm:mb-[170px] sm:mt-[10px]"
-      >
-        <div className="text-white text-center mb-6">
-          <h3 className="text-lg font-semibold mb-4">Hablemos por:</h3>
-          <div className="flex justify-center space-x-8 mb-4">
-            <a href="https://www.instagram.com/ramahernandezz" target="_blank" rel="noopener noreferrer" className="text-orange-500 hover:text-orange-600 transition">
-              <FaInstagram size={40} />
-            </a>
-            <a href="https://wa.link/zu5elf" target="_blank" rel="noopener noreferrer" className="text-orange-500 hover:text-orange-600 transition">
-              <FaWhatsapp size={40} />
-            </a>
-            <a href="https://www.linkedin.com/in/ramahernandez03" target="_blank" rel="noopener noreferrer" className="text-orange-500 hover:text-orange-600 transition">
-              <FaLinkedin size={40} />
-            </a>
+    <section id="Contactame" className="bg-gray-800 px-5 py-24 sm:px-8">
+      <div className="mx-auto grid max-w-6xl gap-10 overflow-hidden rounded-3xl border border-gray-700 bg-gray-900 p-6 shadow-2xl sm:p-10 lg:grid-cols-[0.8fr_1.2fr] lg:p-14">
+        <div className="text-left">
+          <p className="mb-3 text-sm font-bold uppercase tracking-[0.28em] text-orange-500">¿Tenés una idea?</p>
+          <h2 className="text-4xl font-bold text-white sm:text-5xl">Hagámosla realidad.</h2>
+          <p className="mt-5 max-w-md text-base leading-7 text-gray-300">
+            Contame qué necesitás y te respondo personalmente. El mensaje se envía de forma segura a mi casilla.
+          </p>
+          <a href="mailto:ramiro.tomas.hernandez03@gmail.com" className="mt-7 inline-flex items-center gap-3 text-sm font-semibold text-gray-200 hover:text-orange-400">
+            <FaEnvelope aria-hidden="true" /> ramiro.tomas.hernandez03@gmail.com
+          </a>
+          <div className="mt-8 flex gap-4">
+            {[
+              ['Instagram', 'https://www.instagram.com/ramahernandezz', FaInstagram],
+              ['WhatsApp', 'https://wa.link/zu5elf', FaWhatsapp],
+              ['LinkedIn', 'https://www.linkedin.com/in/ramahernandez03', FaLinkedin],
+            ].map(([label, href, Icon]) => (
+              <a key={label} href={href} target="_blank" rel="noopener noreferrer" aria-label={label} className="rounded-full border border-gray-600 p-3 text-orange-500 transition hover:border-orange-500 hover:bg-orange-500 hover:text-white">
+                <Icon size={22} aria-hidden="true" />
+              </a>
+            ))}
           </div>
-          <p className="text-lg font-semibold">O completa el formulario:</p>
         </div>
-        <form action="https://getform.io/f/bzylzwla" method="POST" className='flex flex-col space-y-4 w-full max-w-lg'>
-          <input
-            type="text"
-            name="name"
-            placeholder="Nombre"
-            className='bg-gray-900 text-white placeholder-gray-400 p-4 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500'
-          />
-          <input
-            type="text"
-            name="email"
-            placeholder="Email"
-            className='bg-gray-900 text-white placeholder-gray-400 p-4 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500'
-          />
-          <textarea
-            name="message"
-            placeholder="Mensaje"
-            className='bg-gray-900 text-white placeholder-gray-400 p-4 rounded-md resize-none focus:outline-none focus:ring-2 focus:ring-orange-500'
-            rows="4"
-          ></textarea>
-          <button
-            type="submit"
-            className='bg-orange-500 text-white p-3 rounded-md font-bold hover:bg-orange-600 transition duration-300 ease-in-out w-full'
-          >
-            Enviar
+
+        <form name="contacto" method="POST" data-netlify="true" netlify-honeypot="bot-field" onSubmit={handleSubmit} className="flex flex-col gap-4 text-left">
+          <input type="hidden" name="form-name" value="contacto" />
+          <p className="hidden"><label>No completes este campo: <input name="bot-field" /></label></p>
+          <label className="text-sm font-semibold text-gray-200">
+            Nombre
+            <input required autoComplete="name" type="text" name="name" placeholder="Tu nombre" className="mt-2 w-full rounded-xl border border-gray-600 bg-gray-800 p-4 text-white placeholder-gray-500 outline-none transition focus:border-orange-500 focus:ring-2 focus:ring-orange-500/30" />
+          </label>
+          <label className="text-sm font-semibold text-gray-200">
+            Email
+            <input required autoComplete="email" type="email" name="email" placeholder="tu@email.com" className="mt-2 w-full rounded-xl border border-gray-600 bg-gray-800 p-4 text-white placeholder-gray-500 outline-none transition focus:border-orange-500 focus:ring-2 focus:ring-orange-500/30" />
+          </label>
+          <label className="text-sm font-semibold text-gray-200">
+            Mensaje
+            <textarea required name="message" placeholder="Contame sobre tu proyecto..." className="mt-2 w-full resize-none rounded-xl border border-gray-600 bg-gray-800 p-4 text-white placeholder-gray-500 outline-none transition focus:border-orange-500 focus:ring-2 focus:ring-orange-500/30" rows="5" />
+          </label>
+          <button disabled={status === 'sending'} type="submit" className="mt-2 rounded-xl bg-orange-500 p-4 font-bold text-white transition hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-300 disabled:cursor-wait disabled:opacity-70">
+            {status === 'sending' ? 'Enviando…' : 'Enviar mensaje'}
           </button>
+          <div aria-live="polite" className="min-h-6 text-sm">
+            {status === 'sent' && <p className="font-semibold text-green-400">¡Mensaje enviado! Te respondo a la brevedad.</p>}
+            {status === 'error' && <p className="font-semibold text-red-400">No se pudo enviar. Escribime directamente por email o WhatsApp.</p>}
+          </div>
         </form>
-      </motion.div>
-    </div>
+      </div>
+    </section>
   );
 };
 
