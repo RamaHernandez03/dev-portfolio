@@ -24,12 +24,38 @@ html {
 }
 
 .projects-scroll {
-  scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
+  scrollbar-color: #f97316 #374151;
+  scrollbar-width: thin;
 }
 
 .projects-scroll::-webkit-scrollbar {
-  display: none;
+  display: block;
+  height: 8px;
+}
+
+.projects-scroll::-webkit-scrollbar-track {
+  background: #374151;
+  border-radius: 9999px;
+}
+
+.projects-scroll::-webkit-scrollbar-thumb {
+  background: #f97316;
+  border-radius: 9999px;
+}
+
+.projects-scroll::-webkit-scrollbar-thumb:hover {
+  background: #fb923c;
+}
+
+@media (max-width: 639px) {
+  .projects-scroll {
+    scrollbar-width: none;
+  }
+
+  .projects-scroll::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 code {

@@ -46,14 +46,16 @@ const Projects = () => {
         </div>
       </div>
 
-      <div ref={carouselRef} className="projects-scroll flex snap-x snap-mandatory gap-6 overflow-x-auto px-8 pb-8 sm:px-12 lg:px-[max(4rem,calc((100vw-80rem)/2+4rem))]">
-        {proyectos.map((proyecto) => (
-          <div key={proyecto.title} className="w-[calc(100vw-4rem)] max-w-[360px] shrink-0 snap-center sm:w-[360px] lg:w-[380px] lg:max-w-[380px]">
-            <Servicios {...proyecto} />
-          </div>
-        ))}
+      <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
+        <div ref={carouselRef} className="projects-scroll flex snap-x snap-mandatory gap-6 overflow-x-auto px-1 pb-5 pt-1 lg:pb-7">
+          {proyectos.map((proyecto) => (
+            <div key={proyecto.title} className="w-[calc(100vw-3.5rem)] max-w-[360px] shrink-0 snap-center sm:w-[350px] lg:w-[360px] lg:max-w-[360px]">
+              <Servicios {...proyecto} />
+            </div>
+          ))}
+        </div>
       </div>
-      <p className="px-8 text-center text-xs text-gray-500 sm:hidden">Deslizá para ver más proyectos →</p>
+      <p className="px-5 pt-2 text-center text-xs text-gray-500 sm:hidden">Deslizá para ver más proyectos →</p>
     </section>
   );
 };
